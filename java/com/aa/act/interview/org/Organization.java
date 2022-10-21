@@ -50,14 +50,14 @@ public abstract class Organization {
 		if (person.hasNull()) {
 			throw new IllegalArgumentException("Person name should not be null.");
 		}
-		if (person.hasEmpty()) {
-			throw new IllegalArgumentException("Person name should not be empty.");
+		if (person.hasBlank()) {
+			throw new IllegalArgumentException("Person name should not be blank.");
 		}
 		if (title == null) {
 			throw new IllegalArgumentException("Title should not be null.");
 		}
-		if (title.isEmpty()) {
-			throw new IllegalArgumentException("Title should not be empty.");
+		if (title.trim().isEmpty()) {
+			throw new IllegalArgumentException("Title should not be blank.");
 		}
 		Optional<Position> optPosition = findPosition(root, title);
 		optPosition.ifPresent(position -> {

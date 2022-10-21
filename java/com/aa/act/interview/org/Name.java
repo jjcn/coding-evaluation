@@ -22,8 +22,8 @@ public class Name {
 		return last;
 	}
 
-	public boolean hasEmpty() {
-		return first.isEmpty() | last.isEmpty();
+	public boolean hasBlank() {
+		return first.trim().isEmpty() | last.trim().isEmpty();
 	}
 
 	public boolean hasNull() {
