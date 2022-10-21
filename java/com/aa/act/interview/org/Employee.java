@@ -2,13 +2,15 @@ package com.aa.act.interview.org;
 
 public class Employee {
 
-	private int identifier = 0;
+	private int identifier;
 	private Name name;
+
+	private static int identifierCounter;
 
 	public Employee(Name name) {
 		if(name == null)
 			throw new IllegalArgumentException("name cannot be null");
-		this.identifier = name.hashCode();
+		this.identifier = ++identifierCounter;
 		this.name = name;
 	}
 

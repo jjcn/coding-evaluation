@@ -50,7 +50,7 @@ public abstract class Organization {
 		optPosition.ifPresent(position -> {
 			position.setEmployee(Optional.of(new Employee(person)));
 		});
-		return Optional.empty();
+		return optPosition;
 	}
 
 	@Override
