@@ -22,6 +22,14 @@ public class Name {
 		return last;
 	}
 
+	public boolean hasEmpty() {
+		return first.isEmpty() | last.isEmpty();
+	}
+
+	public boolean hasNull() {
+		return first == null | last == null;
+	}
+
 	@Override
 	public String toString() {
 		return first + " " + last;

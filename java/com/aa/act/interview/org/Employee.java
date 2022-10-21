@@ -4,7 +4,6 @@ public class Employee {
 
 	private int identifier;
 	private Name name;
-
 	private static int identifierCounter;
 
 	public Employee(Name name) {
